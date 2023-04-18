@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.firestore.FirebaseFirestore;
+//import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 
@@ -67,9 +67,9 @@ public class RegisterLastStageActivity extends AppCompatActivity {
                     isPasswordCorrect.setText("Passwords do not match");
                     isPasswordCorrect.setTextColor(Color.RED);
                 } else {
-                    String user = String.valueOf(username.getText());
-                    String pass = String.valueOf(confirmPassword.getText());
-                    addDatabaseToFirestore(user,pass);
+                    //String user = String.valueOf(username.getText());
+                    //String pass = String.valueOf(confirmPassword.getText());
+                    //addDatabaseToFirestore(user,pass);
                     Intent toSearchPage = new Intent(
                             getApplicationContext(), SearchPageActivity.class
                     );
@@ -78,21 +78,21 @@ public class RegisterLastStageActivity extends AppCompatActivity {
             }
         });
     }
-    public void addDatabaseToFirestore(String username, String password){
-        Intent receiveLink = getIntent();
-        String instagramLink = receiveLink.getStringExtra("Instagram Link");
-        FirebaseFirestore data = FirebaseFirestore.getInstance();
-        HashMap<String, Object> user = new HashMap<>();
-        user.put("Username",username);
-        user.put("Instagram Link",instagramLink);
-        user.put("Password",password);
-        data.collection("user")
-                .add(user)
-                .addOnSuccessListener(documentReference -> {
-                    Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
-                })
-                .addOnFailureListener(exception -> {
-                    Toast.makeText(getApplicationContext(), exception.getMessage(), Toast.LENGTH_SHORT).show();
-                });
-    }
+//    public void addDatabaseToFirestore(String username, String password){
+//        Intent receiveLink = getIntent();
+//        String instagramLink = receiveLink.getStringExtra("Instagram Link");
+//        FirebaseFirestore data = FirebaseFirestore.getInstance();
+//        HashMap<String, Object> user = new HashMap<>();
+//        user.put("Username",username);
+//        user.put("Instagram Link",instagramLink);
+//        user.put("Password",password);
+//        data.collection("user")
+//                .add(user)
+//                .addOnSuccessListener(documentReference -> {
+//                    Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
+//                })
+//                .addOnFailureListener(exception -> {
+//                    Toast.makeText(getApplicationContext(), exception.getMessage(), Toast.LENGTH_SHORT).show();
+//                });
+//    }
 }
