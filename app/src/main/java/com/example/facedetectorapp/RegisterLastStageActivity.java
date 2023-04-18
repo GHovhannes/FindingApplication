@@ -71,7 +71,7 @@ public class RegisterLastStageActivity extends AppCompatActivity {
                     String pass = String.valueOf(confirmPassword.getText());
                     addDatabaseToFirestore(user,pass);
                     Intent toSearchPage = new Intent(
-                            getApplicationContext(), SearchByGeolocationActivity.class
+                            getApplicationContext(), SearchPageActivity.class
                     );
                     startActivity(toSearchPage);
                 }
