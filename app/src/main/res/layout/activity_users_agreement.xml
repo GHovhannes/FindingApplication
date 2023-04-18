@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:padding="@dimen/_15sdp"
+    android:scrollbars="none"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+        <CheckBox
+            android:id="@+id/agreement"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="match_parent"
+            android:text="Я согласен"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/to_main_activity"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="NEXT"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            android:background="@drawable/button_background"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">FaceDetectorApp</string>
+    <string name="title_activity_home_page">HomePageActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="registration_center">REGISTRATION CENTER</string>
+    <string name="give_me_your_instagram_url">Give me your Instagram URL</string>
+    <string name="give_me_your_phone_number">Give me your phone number</string>
+    <string name="next_stage">NEXT STAGE</string>
+    <string name="registration">Registration</string>
+    <string name="your_instagram_link">Your Instagram Link</string>
+    <string name="your_telephone_number">Your Telephone Number</string>
+    <string name="next">Next</string>
+    <string name="verification">Verification</string>
+    <string name="we_ve_send_the_verification_code_to_your_instagram">We\'ve send the verification code to your Instagram</string>
+    <string name="check_the_code">Check the code</string>
+    <string name="create_password">Create password</string>
 </resources>
