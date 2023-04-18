@@ -64,7 +64,7 @@
             android:background="@drawable/edit_text_background"/>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/to_verification_stage"
+            android:id="@+id/to_main"
             android:layout_gravity="center"
             android:layout_width="@dimen/_150sdp"
             android:layout_height="wrap_content"

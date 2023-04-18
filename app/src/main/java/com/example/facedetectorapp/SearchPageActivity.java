@@ -34,7 +34,7 @@ public class SearchPageActivity extends AppCompatActivity {
 
     Button selectImage,detectFaces;
 
-    ImageView imageView;
+    ImageView imageView,toProfilePage,toHistoryPage;
 
     private static int RESULT_LOAD_IMAGE = 1;
 
@@ -51,14 +51,28 @@ public class SearchPageActivity extends AppCompatActivity {
         selectImage = findViewById(R.id.importer);
         detectFaces = findViewById(R.id.finder);
         imageView = findViewById(R.id.image);
+        toHistoryPage = findViewById(R.id.to_history_page);
+        toProfilePage = findViewById(R.id.to_profile_page);
 
-
+        toProfilePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toProfile = new Intent(getApplicationContext(),ProfilePageActivity.class);
+                startActivity(toProfile);
+            }
+        });
+        toHistoryPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toHistory = new Intent(getApplicationContext(),HistoryPageActivity.class);
+                startActivity(toHistory);
+            }
+        });
         selectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(intent,RESULT_LOAD_IMAGE);
-
             }
         });
 
