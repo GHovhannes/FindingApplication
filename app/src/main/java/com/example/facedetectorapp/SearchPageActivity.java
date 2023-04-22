@@ -138,7 +138,7 @@ public class SearchPageActivity extends AppCompatActivity {
         });
     }
     public boolean checkPermission(){
-        if(Build.VERSION.SDK_INT>=23){
+        if(Build.VERSION.SDK_INT>=27){
             if(checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
                 return true;
             }else{
