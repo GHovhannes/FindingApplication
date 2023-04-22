@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
             android:textColor="@color/white"
-            android:text="AriAmusnananq_999"
+            android:text="My Username"
             android:textSize="@dimen/_20ssp"/>
 
         <TextView
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
             android:textColor="@color/white"
-            android:text="amusnacanq__gg__"
+            android:text="My instagram username"
             android:textSize="@dimen/_20ssp"/>
 
         <LinearLayout
