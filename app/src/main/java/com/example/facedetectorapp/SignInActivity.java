@@ -85,7 +85,7 @@ public class SignInActivity extends AppCompatActivity {
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(flag1[0]&&flag2[0]){
+                if(username.getText().toString().isEmpty()&&password.getText().toString().isEmpty()){
                     Intent toSearch = new Intent(getApplicationContext(),SearchPageActivity.class);
                     startActivity(toSearch);
                 }

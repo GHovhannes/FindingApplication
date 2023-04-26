@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 //import com.google.firebase.firestore.FirebaseFirestore;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.HashMap;
 
 public class RegisterLastStageActivity extends AppCompatActivity {
@@ -119,6 +121,7 @@ public class RegisterLastStageActivity extends AppCompatActivity {
                         &&!username.getText().toString().isEmpty()
                         &&!confirmPassword.getText().toString().isEmpty()
                         &&confirmPassword.getText().toString().equals(pass.getText().toString())) {
+                    addDatabaseToFirestore(username.getText().toString(),confirmPassword.getText().toString());
                     Intent toSearch = new Intent(getApplicationContext(),SearchPageActivity.class);
                     startActivity(toSearch);
                 }else if(!confirmPassword.getText().toString().equals(pass.getText().toString())){
@@ -132,21 +135,21 @@ public class RegisterLastStageActivity extends AppCompatActivity {
             }
         });
     }
-//    public void addDatabaseToFirestore(String username, String password){
-//        Intent receiveLink = getIntent();
-//        String instagramLink = receiveLink.getStringExtra("Instagram Link");
-//        FirebaseFirestore data = FirebaseFirestore.getInstance();
-//        HashMap<String, Object> user = new HashMap<>();
-//        user.put("Username",username);
-//        user.put("Instagram Link",instagramLink);
-//        user.put("Password",password);
-//        data.collection("user")
-//                .add(user)
-//                .addOnSuccessListener(documentReference -> {
-//                    Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
-//                })
-//                .addOnFailureListener(exception -> {
-//                    Toast.makeText(getApplicationContext(), exception.getMessage(), Toast.LENGTH_SHORT).show();
-//                });
-//    }
+    public void addDatabaseToFirestore(String username, String password){
+        Intent receiveLink = getIntent();
+        String instagramLink = receiveLink.getStringExtra("Instagram Link");
+        FirebaseFirestore data = FirebaseFirestore.getInstance();
+        HashMap<String, Object> user = new HashMap<>();
+        user.put("Username",username);
+        user.put("Instagram Link",instagramLink);
+        user.put("Password",password);
+        data.collection("user")
+                .add(user)
+                .addOnSuccessListener(documentReference -> {
+                    Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();
+                })
+                .addOnFailureListener(exception -> {
+                    Toast.makeText(getApplicationContext(), exception.getMessage(), Toast.LENGTH_SHORT).show();
+                });
+    }
 }
