@@ -18,38 +18,11 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        EditText instagram = findViewById(R.id.instagram_link);
-        TextView errorLink = findViewById(R.id.instagram_link_warning);
         TextView next = findViewById(R.id.to_verification_stage);
         TextView errorPhoneNumber = findViewById(R.id.phone_number_warning);
         EditText phone = findViewById(R.id.phone_number);
-        final boolean[] flag1 = {false};
         final boolean[] flag2 = {false};
 
-        instagram.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(instagram.getText().toString().isEmpty()){
-                    instagram.setBackground(AppCompatResources.getDrawable(getApplicationContext(),R.drawable.error_edit_text_border));
-                    errorLink.setText("Please write your instagram nickname");
-                }
-                else{
-                    errorLink.setText("Your Instagram Nickname");
-                    instagram.setBackground(AppCompatResources.getDrawable(getApplicationContext(),R.drawable.ok_edit_text_border));
-                    flag1[0] = true;
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
         phone.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -77,9 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!instagram.getText().toString().isEmpty()&&!phone.getText().toString().isEmpty()){
-                    Intent sendLink = new Intent(getApplicationContext(),RegisterLastStageActivity.class);
-                    sendLink.putExtra("Instagram Link",instagram.getText().toString());
+                if(!phone.getText().toString().isEmpty()){
                     Intent toVerification = new Intent(getApplicationContext(),VerificationActivity.class);
                     startActivity(toVerification);
                 }

@@ -33,8 +33,8 @@ public class RegisterLastStageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_last_stage);
         pass = findViewById(R.id.create_password);
-        username = findViewById(R.id.create_username);
-        userError = findViewById(R.id.create_username_warning);
+        username = findViewById(R.id.instagram_username);
+        userError = findViewById(R.id.instagram_username_warning);
         confirmPassword = findViewById(R.id.confirm_password);
         isPasswordCorrect = findViewById(R.id.confirm_password_warning);
         submit = findViewById(R.id.submit);
@@ -136,12 +136,9 @@ public class RegisterLastStageActivity extends AppCompatActivity {
         });
     }
     public void addDatabaseToFirestore(String username, String password){
-        Intent receiveLink = getIntent();
-        String instagramLink = receiveLink.getStringExtra("Instagram Link");
         FirebaseFirestore data = FirebaseFirestore.getInstance();
         HashMap<String, Object> user = new HashMap<>();
         user.put("Username",username);
-        user.put("Instagram Link",instagramLink);
         user.put("Password",password);
         data.collection("user")
                 .add(user)

@@ -27,30 +27,14 @@
             android:textSize="@dimen/_22ssp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/instagram_link_warning"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_25sdp"
-            android:text="@string/your_instagram_link"
-            android:textColor="@color/primary_text"
-            android:textSize="@dimen/_13ssp"
-            android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/instagram_link"
-            android:layout_width="match_parent"
-            android:inputType="text"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:background="@drawable/edit_text_background"/>
 
 
         <TextView
             android:id="@+id/phone_number_warning"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_85sdp"
             android:text="@string/your_telephone_number"
             android:textColor="@color/primary_text"
             android:textSize="@dimen/_13ssp"
@@ -61,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
             android:inputType="number"
-            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_25sdp"
             android:background="@drawable/edit_text_background"/>
 
         <com.google.android.material.button.MaterialButton
@@ -69,7 +53,7 @@
             android:layout_gravity="center"
             android:layout_width="@dimen/_150sdp"
             android:layout_height="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_100sdp"
             android:text="@string/next"
             android:textColor="@color/white"
             android:textSize="@dimen/_13ssp"

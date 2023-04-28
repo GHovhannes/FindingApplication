@@ -28,17 +28,17 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/create_username_warning"
+            android:id="@+id/instagram_username_warning"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_25sdp"
-            android:text="Create username"
+            android:text="Instagram username"
             android:textColor="@color/primary_text"
             android:textSize="@dimen/_13ssp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/create_username"
+            android:id="@+id/instagram_username"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
             android:inputType="text"
