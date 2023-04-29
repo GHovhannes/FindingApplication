@@ -44,10 +44,13 @@ public class VerificationActivity extends AppCompatActivity {
             }
         });
         submit.setOnClickListener(new View.OnClickListener() {
+            Intent pn = getIntent();
+            String phoneNumber = pn.getStringExtra("Phone number");
             @Override
             public void onClick(View v) {
                 if (flag[0]) {
                     Intent toLastStage = new Intent(getApplicationContext(), RegisterLastStageActivity.class);
+                    toLastStage.putExtra("Phone number",phoneNumber);
                     startActivity(toLastStage);
                 }
             }

@@ -137,10 +137,13 @@ public class RegisterLastStageActivity extends AppCompatActivity {
     }
     public void addDatabaseToFirestore(String username, String password){
         FirebaseFirestore data = FirebaseFirestore.getInstance();
+        Intent getNumber = getIntent();
+        String phoneNumber = getNumber.getStringExtra("Phone number");
         HashMap<String, Object> user = new HashMap<>();
         user.put("Username",username);
         user.put("Password",password);
-        data.collection("user")
+        user.put("Phone Number",phoneNumber);
+        data.collection("Users")
                 .add(user)
                 .addOnSuccessListener(documentReference -> {
                     Toast.makeText(getApplicationContext(), "Data inserted", Toast.LENGTH_SHORT).show();

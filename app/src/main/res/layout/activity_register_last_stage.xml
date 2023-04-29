@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_25sdp"
-            android:text="Instagram username"
+            android:text="Instagram nickname"
             android:textColor="@color/primary_text"
             android:textSize="@dimen/_13ssp"
             android:textStyle="bold" />

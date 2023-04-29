@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -52,6 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(!phone.getText().toString().isEmpty()){
                     Intent toVerification = new Intent(getApplicationContext(),VerificationActivity.class);
+                    toVerification.putExtra("Phone number",phone.getText().toString());
                     startActivity(toVerification);
                 }
             }
